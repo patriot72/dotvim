@@ -24,6 +24,7 @@ set clipboard+=unnamed
 set hidden
 set cmdheight=2 
 set number
+set history=200
 "
 "VUNDLE CONFIG
 "
@@ -108,6 +109,8 @@ map <right> :bn<cr>
 map <left> :bp<cr>
 "Nerdtree öfnnen mit CTRL+n
 map <C-n> :NERDTreeToggle<CR>
+"Expand Active File Directory
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
